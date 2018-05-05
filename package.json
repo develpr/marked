@@ -1,27 +1,19 @@
 {
-  "name": "marked",
-  "description": "A markdown parser built for speed",
+  "name": "marked-bear",
+  "description": "A markdown parser built for speed that looks like Bear",
   "author": "Christopher Jeffrey",
   "version": "0.3.19",
   "main": "./lib/marked.js",
   "bin": "./bin/marked",
   "man": "./man/marked.1",
-  "repository": "git://github.com/markedjs/marked.git",
-  "homepage": "https://marked.js.org",
+  "repository": "git://github.com/develpr/marked-bear.git",
+  "homepage": "https://kevinmitchell.io/marked-bear",
   "bugs": {
-    "url": "http://github.com/markedjs/marked/issues"
+    "url": "http://github.com/develpr/marked-bear/issues"
   },
   "license": "MIT",
-  "keywords": [
-    "markdown",
-    "markup",
-    "html"
-  ],
-  "tags": [
-    "markdown",
-    "markup",
-    "html"
-  ],
+  "keywords": ["markdown", "markup", "html"],
+  "tags": ["markdown", "markup", "html"],
   "devDependencies": {
     "eslint": "^4.15.0",
     "eslint-config-standard": "^11.0.0-beta.0",
@@ -49,11 +41,14 @@
     "test:marked": "npm test -- test/specs/marked/**/*-spec.js",
     "test:old": "node test",
     "test:lint": "eslint bin/marked .",
-    "test:redos": "eslint --plugin vuln-regex-detector --rule '\"vuln-regex-detector/no-vuln-regex\": 2' lib/marked.js",
+    "test:redos":
+      "eslint --plugin vuln-regex-detector --rule '\"vuln-regex-detector/no-vuln-regex\": 2' lib/marked.js",
     "bench": "node test --bench",
     "lint": "eslint --fix bin/marked .",
-    "build": "uglifyjs lib/marked.js -cm  --comments /Copyright/ -o marked.min.js",
-    "preversion": "npm run build && (git diff --quiet || git commit -am 'minify')"
+    "build":
+      "uglifyjs lib/marked.js -cm  --comments /Copyright/ -o marked.min.js",
+    "preversion":
+      "npm run build && (git diff --quiet || git commit -am 'minify')"
   },
   "engines": {
     "node": ">=0.10.0"
