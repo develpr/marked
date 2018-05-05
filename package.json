@@ -2,7 +2,7 @@
   "name": "marked-bear",
   "description": "A markdown parser built for speed that looks like Bear",
   "author": "Christopher Jeffrey",
-  "version": "0.3.21",
+  "version": "0.4.0",
   "main": "./lib/marked.js",
   "types": "./lib/marked.d.ts",
   "bin": "./bin/marked",
